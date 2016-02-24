@@ -1,8 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="e1a4c0ff-7918-4e02-9abc-3f5603098974"
   name="ModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="d5b4bbc0-51a1-457f-b738-d1dfd32a0658">
+      <body>售票管理人员使用</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="590948aa-f2e9-44b0-b1f2-7b4601d14eaf"
+          LastKnownName="统计"
+          LastKnownLocation="ModelingProject.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -21,7 +33,346 @@
     <packageHasNamedElement>
       <actor
         Id="ae2fce1c-f554-414d-bb2b-71a420ae033b"
-        name="Actor1"
+        name="消费者"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="406d263f-22cf-4fcf-8c69-d6a14dbd5c9a"
+            isDerived="false"
+            sourceEndRoleName="消费者"
+            targetEndRoleName="购票1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0ad2a058-c0bd-4296-928a-7c57e91dfe55"
+              LastKnownName="购票"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2488fed6-2bf2-484f-9060-22a0922743b7"
+                  name="消费者"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="71a447b9-3f56-4356-9515-d9cf448fae98"
+                  name="购票1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="ac309ee2-28ff-4d12-a803-2743dfddf7e8"
+        name="售票系统"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ac783039-bb35-4886-b568-7f617185db47"
+        name="售票"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="22db4188-49b8-4db1-b659-164c314f9804"
+        name="查票"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="ac309ee2-28ff-4d12-a803-2743dfddf7e8"
+            LastKnownName="售票系统"
+            LastKnownLocation="ModelingProject.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="aa88d684-e0e6-4a4c-8c7e-71629695433a"
+        name="购票"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="ac309ee2-28ff-4d12-a803-2743dfddf7e8"
+            LastKnownName="售票系统"
+            LastKnownLocation="ModelingProject.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2e86bfcc-cc46-4133-8409-636711258460"
+        name="付款"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="ac309ee2-28ff-4d12-a803-2743dfddf7e8"
+            LastKnownName="售票系统"
+            LastKnownLocation="ModelingProject.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="ee4c8132-56c5-43ec-ac2d-538abd643c01"
+        name="消费者1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="590948aa-f2e9-44b0-b1f2-7b4601d14eaf"
+        name="统计"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="ac309ee2-28ff-4d12-a803-2743dfddf7e8"
+            LastKnownName="售票系统"
+            LastKnownLocation="ModelingProject.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="30ffa95e-ba57-4927-995f-7d0b83f2a888"
+        name="购票"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="dd9a43f8-e8f9-4a3b-b95d-27240bf62421">
+            <artifactMoniker
+              Id="7eb4d134-6b87-432e-8fea-5e506d26793a"
+              LastKnownName="购票详细说明"
+              LastKnownLocation="ModelingProject.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="7eb4d134-6b87-432e-8fea-5e506d26793a"
+        name="购票详细说明"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0ad2a058-c0bd-4296-928a-7c57e91dfe55"
+        name="购票"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5c020192-fe00-4021-95db-36bf719b7347"
+        name="购票"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="5dfa4f80-a16d-4373-824f-bf1667e296f7"
+        name="普通用户"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="83b832b6-f6c5-40cd-99bb-c4d7bc55c9c0"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="3feb8369-8abf-408b-9a52-9f85fc12613e"
+              LastKnownName="用户"
+              LastKnownLocation="ModelingProject.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="15b1b719-84f2-421f-8f7d-d28ce00d1cb3"
+        name="管理员"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="80dc26de-f571-4d5a-8341-bad21ff92c9b"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="3feb8369-8abf-408b-9a52-9f85fc12613e"
+              LastKnownName="用户"
+              LastKnownLocation="ModelingProject.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="5fd5a084-5ce5-4fe7-9930-75b2cc5ecd9a"
+        name="VIP用户"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="8b2ca25f-f4df-4ece-8065-b04291c65fb7"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="3feb8369-8abf-408b-9a52-9f85fc12613e"
+              LastKnownName="用户"
+              LastKnownLocation="ModelingProject.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4e7e4194-11d4-4b8a-ac86-debe6794e52c"
+        name="网上购票"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="da75f52b-539a-40ae-a320-aecf6135e945"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="5c020192-fe00-4021-95db-36bf719b7347"
+              LastKnownName="购票"
+              LastKnownLocation="ModelingProject.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a9f874ce-0dea-414a-abfc-5a7c2404e192"
+        name="电话购票"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="10ffc388-7ef5-4a49-a969-4408d8e4dae3"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="5c020192-fe00-4021-95db-36bf719b7347"
+              LastKnownName="购票"
+              LastKnownLocation="ModelingProject.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="129f539d-056b-4aa7-acb7-5b9929fcaf50"
+        name="现场购票"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="062903be-85db-497b-8a07-f913a550485a"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="5c020192-fe00-4021-95db-36bf719b7347"
+              LastKnownName="购票"
+              LastKnownLocation="ModelingProject.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="3feb8369-8abf-408b-9a52-9f85fc12613e"
+        name="用户"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b02661fd-3225-469b-8b86-c40d779ab999"
+        name="用户"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="4a1d26bc-d0c7-4353-9fff-779e4f3460b1">
+            <useCaseMoniker
+              Id="a1b57106-6bbf-4285-9a2e-18e658ab25c4"
+              LastKnownName="新增"
+              LastKnownLocation="ModelingProject.uml" />
+          </include>
+          <include
+            Id="00f61825-1edc-4160-8837-fadd37da7632">
+            <useCaseMoniker
+              Id="c37c7760-ea9c-498e-8189-f6f838ab22b6"
+              LastKnownName="删除"
+              LastKnownLocation="ModelingProject.uml" />
+          </include>
+          <include
+            Id="cbc6b012-ed0c-4e0c-b095-1cbbcc167635">
+            <useCaseMoniker
+              Id="0d9baefe-6652-4d3e-a09e-76850f8b2d37"
+              LastKnownName="修改"
+              LastKnownLocation="ModelingProject.uml" />
+          </include>
+          <include
+            Id="174d86dc-3779-4ca1-9006-2e2a1b6d4e4e">
+            <useCaseMoniker
+              Id="81e1b65a-460d-4ecc-b227-061e10fc910f"
+              LastKnownName="查询"
+              LastKnownLocation="ModelingProject.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a1b57106-6bbf-4285-9a2e-18e658ab25c4"
+        name="新增"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0d9baefe-6652-4d3e-a09e-76850f8b2d37"
+        name="修改"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c37c7760-ea9c-498e-8189-f6f838ab22b6"
+        name="删除"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="81e1b65a-460d-4ecc-b227-061e10fc910f"
+        name="查询"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
