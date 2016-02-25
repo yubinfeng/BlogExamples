@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c0c3aab5-afd9-45a0-bd2a-f2afdce9918f" name="Activity" linkedPackageId="5b2e746a-2204-4463-952e-04561348e7f3" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="67db113c-9edf-439a-86dd-af2439838722">
+      <elementDefinition Id="09517c2b-f22f-4e90-b5e6-6397752d8865" />
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="f3f7ce75-230c-4467-9562-7b5ee8715658">
+      <profileInstance Id="fc192451-b411-418a-a59a-be18a29c2f93" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="87e2657b-d182-45eb-8603-c73efdf973db">
+      <profileInstance Id="4230189a-282c-4a47-a050-5ce97bebad66" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="4b1704f7-7727-48c5-831d-f95aeb1ad141" name="Activity" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="00d1f819-2b14-4516-99c4-af277736315b" />
+        <nodes>
+          <initialNode Id="44bb0ddb-b4e7-4a0b-8a1a-d37be67533fd" name="Initial1" isLeaf="false">
+            <elementDefinition Id="0b571e50-08d4-4a8d-9144-ff1afc342783" />
+          </initialNode>
+          <activityFinalNode Id="426ee464-f757-4ffc-9da4-e9a1e6b7eca4" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="5238da77-3713-49bd-a197-04183ee5043c" />
+          </activityFinalNode>
+          <opaqueAction Id="54175609-e4ed-44de-8bc8-fb269166137c" name="Action1" isLeaf="false">
+            <elementDefinition Id="d2322e3b-e0c2-41f7-ac89-b407d7a4ed3d" />
+          </opaqueAction>
+          <objectNode Id="43100d05-bb58-4313-aa28-65ca85b77dcd" name="Object1" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="8e209a63-093a-4252-b04d-2002b8eb2fa9" />
+            <upperBound>
+              <literalInteger Id="69778c5b-ea59-4330-ac9b-37accafe5fc1" name="2147483647" value="2147483647">
+                <elementDefinition Id="e2980e27-279b-47b2-980b-14fa7b72043f" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <decisionNode Id="7ed859dc-15e7-422f-862b-99b764c41915" name="Decision1" isLeaf="false">
+            <elementDefinition Id="970f02b5-12d9-4fe9-87a6-b1eda3482ed4" />
+          </decisionNode>
+          <mergeNode Id="af2dabb9-c050-487b-aff0-e4282f1d7695" name="Merge1" isLeaf="false">
+            <elementDefinition Id="eca30ca2-0a3b-4d88-803d-de32c57e0e72" />
+          </mergeNode>
+          <forkNode Id="5505a557-6acb-4fe1-9092-f08b2eeb4fc5" name="Fork1" isLeaf="false">
+            <elementDefinition Id="0101d864-5078-4c09-b620-4b6f27e71642" />
+          </forkNode>
+          <joinNode Id="f7aacd28-1bad-47ea-b2b1-366b226bf222" name="Join1" isLeaf="false">
+            <elementDefinition Id="125a3c23-6876-4bd7-9a5e-955b146585f5" />
+          </joinNode>
+          <sendSignalAction Id="205294fe-25e7-4553-8873-ec1899d0403b" name="Signal1" isLeaf="false">
+            <elementDefinition Id="43a67eae-1d82-4a10-8ee4-0baf0c6b39d9" />
+          </sendSignalAction>
+          <acceptEventAction Id="60e9eff9-ea1d-41b7-890a-8c7ca50a44ff" name="Event1" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="08adffde-a6fe-46da-af20-bd8b2f28a60d" />
+          </acceptEventAction>
+          <callBehaviorAction Id="a60e946c-c351-4e12-a5ef-60ba45c526c6" name="Behavior1" isLeaf="false">
+            <elementDefinition Id="3dfbd4df-37f6-4755-8dad-49ea33f591df" />
+          </callBehaviorAction>
+          <callOperationAction Id="c56a37f9-2789-45f7-82fb-2cb29456e48f" name="Operation1" isLeaf="false">
+            <elementDefinition Id="9c3ecad8-fde7-4179-a716-8538b9e2aa42" />
+          </callOperationAction>
+          <activityParameterNode Id="2c1196b6-0e7e-4a79-ab9b-bc20a61f3079" name="ActivityParameter1" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="c564250c-b152-43ad-b0bc-36ac26967659" />
+            <upperBound>
+              <literalInteger Id="ec42312c-114f-4884-9674-371c2e79314b" name="2147483647" value="2147483647">
+                <elementDefinition Id="265d9959-b821-439d-80b5-b30523b0d2b4" />
+              </literalInteger>
+            </upperBound>
+          </activityParameterNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="5b2e746a-2204-4463-952e-04561348e7f3" name="ModelingProject">
+    <elementDefinition Id="75469d1a-900a-4fb6-8aef-b10cdf33bc45" />
+  </package>
+</activityRootModel>
