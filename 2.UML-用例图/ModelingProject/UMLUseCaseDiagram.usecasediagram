@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="f5b197ed-5ad5-4a30-b918-b6668fd14545" name="UMLUseCaseDiagram" linkedPackageId="db184c2f-0ed5-4873-9290-7de96fd1b2ea" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="f5b197ed-5ad5-4a30-b918-b6668fd14545" name="UMLUseCaseDiagram" linkedPackageId="db184c2f-0ed5-4873-9290-7de96fd1b2ea" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <ownedCommentsInternal>
     <comment Id="54899575-5538-4ac8-8edc-58e1284adf60">
       <elementDefinition Id="d5b4bbc0-51a1-457f-b738-d1dfd32a0658" />
@@ -213,6 +213,49 @@
     <useCaseModelRootHasTypes>
       <useCase Id="2f5be5d9-c81e-4240-8991-dc3ed3b85a85" name="查询" isAbstract="false" isLeaf="false">
         <elementDefinition Id="81e1b65a-460d-4ecc-b227-061e10fc910f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5928859a-3c6b-4b4f-a627-33edbf67e792" name="用户数据中心" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="18057c37-aa6b-498c-9b65-0d552dfa39bd" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f0e8bb08-85ca-470a-a513-d29001f2da03" name="售后服务中心" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f91c3072-99ff-4211-8951-6936118daf23" />
+        <extendedCases>
+          <extend Id="4bd9f5e8-1c49-4d5f-8380-4b8c7c553f86">
+            <useCaseMoniker Id="5928859a-3c6b-4b4f-a627-33edbf67e792" LastKnownName="用户数据中心" />
+            <elementDefinition Id="9b591cf0-e1b9-466e-b24c-2c0d5c779b12" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d28c950f-1a65-4d9e-9fce-2a420fdf0241" name="业务销售中心" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2bd0b45f-138a-4427-bfaf-2ade5d1137f4" />
+        <extendedCases>
+          <extend Id="2cf8f9e6-f733-40fc-9491-80334e5daec4">
+            <useCaseMoniker Id="5928859a-3c6b-4b4f-a627-33edbf67e792" LastKnownName="用户数据中心" />
+            <elementDefinition Id="44e734d1-9423-4d9c-b4c5-5e6c616b19f9" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f0711045-753f-4205-b20e-cf3fde50cdf7" name="程序员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="26f1570e-45a3-441f-b77b-bc8581de0bf2" />
+        <suppliersInternal>
+          <dependency Id="cbb68439-96d0-4327-a81c-8bfa1ac748f8">
+            <useCaseMoniker Id="00fd3c2f-d48f-4453-8236-2d5b45e0ef35" LastKnownName="电脑" />
+            <elementDefinition Id="9fea89fb-2f4f-461c-bd9f-dba98fd377ed" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="00fd3c2f-d48f-4453-8236-2d5b45e0ef35" name="电脑" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1ec5664e-4c71-4484-95bf-62e4fd41b031" />
       </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>
