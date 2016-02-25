@@ -1,1 +1,167 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9a26bdb5-1fe8-47ac-80d5-4c9ca4c4d5fa" name="DataFlows" linkedPackageId="dabe5d2f-7368-4aaf-a93b-c19446070fae" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="61220135-5590-449b-a713-1ca9669f7053">
+      <profileInstance Id="e35df3bc-8145-4e23-b224-1181fd8a8a69" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a5f4107c-33c4-4644-bcd6-c9528326a467">
+      <profileInstance Id="1ae1f404-dc84-4815-b89c-68fc26f6f057" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="974962f2-a754-4fd6-bb7c-74d5a1045bcd" name="DataFlows" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="168e013a-733e-4bc4-a891-8c49649360e7" />
+        <nodes>
+          <opaqueAction Id="857a9271-9c8d-4eaa-a170-3d79d87ea40e" name="查询货物" isLeaf="false">
+            <elementDefinition Id="a26cd66f-bf6e-498e-ab26-2284d73c7ed1" />
+            <objectFlowTargets>
+              <objectFlow Id="984ec4a2-94d8-4995-a387-9ffdf0eddea0" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <activityParameterNodeMoniker Id="392abb6c-8cea-41f4-bf63-5b7402be5890" LastKnownName="库存更新记录" />
+                <elementDefinition Id="6cabcfe5-a44a-45d4-ae2d-964b34e52a90" />
+              </objectFlow>
+            </objectFlowTargets>
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="bf60922d-d8f5-4e86-b1f3-0c43b9b8e231" name="订单编号" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="eadacf42-b52f-4f07-af4d-420c5563569e" />
+                  <objectFlowTargets>
+                    <objectFlow Id="b1a8fad9-2199-44aa-87cf-f588785cf374" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <inputPinMoniker Id="6fea7ebe-61f4-4edf-a8e4-5730b628a5b9" />
+                      <elementDefinition Id="89394b13-a734-4810-affa-3e2feb8766b0" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="f6785098-7cd7-4cd2-b348-6e7cbbe6e792" name="2147483647" value="2147483647">
+                      <elementDefinition Id="4d9fc234-953b-469c-b7fd-5d37dcf5b64e" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+              <opaqueActionHasInputValues>
+                <inputPin Id="58f97b75-b139-4cc1-a989-6bb3195da3a5" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="42a9159d-96b7-4fbf-99de-834f1c342469" />
+                  <upperBound>
+                    <literalInteger Id="2e333982-f6ef-487c-992b-27655edf30b6" name="2147483647" value="2147483647">
+                      <elementDefinition Id="537eec34-f326-4b3b-a517-dd85d639fc10" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction Id="5f1afa40-209b-4717-b574-900517432619" name="打包货物" isLeaf="false">
+            <elementDefinition Id="7de27311-4fe9-4d7a-adea-831b9792ae67" />
+            <flowNodeTargets>
+              <controlFlow Id="c73fdf96-15f7-489d-bfc7-0c41784a5e0c" isLeaf="false">
+                <opaqueActionMoniker Id="0df1789b-fcbb-4eea-aa44-8a26c63ec6e2" LastKnownName="货物配送" />
+                <elementDefinition Id="2a1b9d9c-07a8-420b-bd17-176d5f885790" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="6fea7ebe-61f4-4edf-a8e4-5730b628a5b9" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="fecb2fbd-bdba-494a-98ec-2117be451d7c" />
+                  <upperBound>
+                    <literalInteger Id="22af060a-9ad3-46b0-bb45-506b6dbeeb6e" name="2147483647" value="2147483647">
+                      <elementDefinition Id="6bc2901e-b09e-49c3-a4b7-1be41b4e809e" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasInputValues>
+                <inputPin Id="41f36ca4-2c0d-4353-9df5-2feb72afc9ce" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="b7d96a29-c4b1-4d10-9098-f322efb0e6e4" />
+                  <upperBound>
+                    <literalInteger Id="8b2f9902-b2b2-4c1a-9f9f-b855bd2f4be5" name="2147483647" value="2147483647">
+                      <elementDefinition Id="7fcd1f5b-c28c-4e41-ac49-e1b444c86e86" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction Id="0df1789b-fcbb-4eea-aa44-8a26c63ec6e2" name="货物配送" isLeaf="false">
+            <elementDefinition Id="12698719-c8de-42fb-8616-c6f1aee6c4c1" />
+          </opaqueAction>
+          <activityParameterNode Id="8d8b4229-0b9a-4b44-8adf-32aa58e52175" name="货物列表" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="e1ffd532-5c3d-4008-90f4-08239e669ff7" />
+            <objectFlowTargets>
+              <objectFlow Id="c2498f54-9d86-47db-9b7d-fe46e4aa5a97" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="58f97b75-b139-4cc1-a989-6bb3195da3a5" />
+                <elementDefinition Id="30d4a782-c401-45c8-8f80-3b35a3db1ea8" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="7651828d-3049-4305-ae76-29c501f75580" name="2147483647" value="2147483647">
+                <elementDefinition Id="3360b055-3f10-4962-82a8-2c806b3a8dfe" />
+              </literalInteger>
+            </upperBound>
+          </activityParameterNode>
+          <activityParameterNode Id="392abb6c-8cea-41f4-bf63-5b7402be5890" name="库存更新记录" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="b961dd0b-3867-4e30-bd14-af08e4db7489" />
+            <upperBound>
+              <literalInteger Id="90a762e1-2f28-42cb-8254-0667ade742f3" name="2147483647" value="2147483647">
+                <elementDefinition Id="243751cf-a3f4-48b9-ad44-76d752d3f8d9" />
+              </literalInteger>
+            </upperBound>
+          </activityParameterNode>
+          <opaqueAction Id="94f37bce-e03e-45f4-8f70-df0ee88642c5" name="打印出货单" isLeaf="false">
+            <elementDefinition Id="7d550fd2-003b-401d-9cc5-56578a8d3621" />
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="2f6f0b6d-77e0-483d-9902-8dff6695e1b7" name="地址" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="823a38b2-9379-404f-8a78-b830a6aca7f0" />
+                  <objectFlowTargets>
+                    <objectFlow Id="d2618656-5fd0-4fa8-830b-bc871d9b49f6" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <inputPinMoniker Id="41f36ca4-2c0d-4353-9df5-2feb72afc9ce" />
+                      <elementDefinition Id="34a3ff1d-4542-42bf-a207-c03b3c40c12f" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="567e8aef-a3a3-4f7b-a9d9-42c9a3f39a40" name="2147483647" value="2147483647">
+                      <elementDefinition Id="eaa9b615-8c62-4bb3-9105-9631be357139" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+              <opaqueActionHasInputValues>
+                <inputPin Id="282fc159-dcdc-4c5e-8570-66f5dd7c7766" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="c378b980-ce2d-414d-b61f-175282ef9bc1" />
+                  <upperBound>
+                    <literalInteger Id="7dbcd492-f7bb-41d5-8b70-5725e870e7ba" name="2147483647" value="2147483647">
+                      <elementDefinition Id="48b4013f-3332-4e0d-a3c5-be9ab9367e04" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <activityParameterNode Id="5462eeb8-f103-4c4a-b279-55ff15cdfccc" name="客户地址" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="d0f59fe3-5aab-4bd6-8e7d-6cd40ad98e19" />
+            <objectFlowTargets>
+              <objectFlow Id="954555fb-5857-4c4c-b179-410414530702" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="282fc159-dcdc-4c5e-8570-66f5dd7c7766" />
+                <elementDefinition Id="0bf1dd84-01bf-482e-82ee-bee102f3c10b" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="1cf82598-6613-4154-8322-6ea9881ab44b" name="2147483647" value="2147483647">
+                <elementDefinition Id="9eb707c0-2ced-4f5f-aa7b-42c3db956a4c" />
+              </literalInteger>
+            </upperBound>
+          </activityParameterNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="dabe5d2f-7368-4aaf-a93b-c19446070fae" name="ModelingProject">
+    <elementDefinition Id="75469d1a-900a-4fb6-8aef-b10cdf33bc45" />
+  </package>
+</activityRootModel>
