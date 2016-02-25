@@ -22,6 +22,27 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="ConcurrentFlows.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ConcurrentFlows.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ConcurrentFlows.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="DataFlows.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DataFlows.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DataFlows.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="SimpleControlFlow.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SimpleControlFlow.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SimpleControlFlow.activitydiagram</DependentUpon>
+    </Content>
     <Content Include="UMLActivityDiagram.activitydiagram">
       <SubType>Content</SubType>
     </Content>

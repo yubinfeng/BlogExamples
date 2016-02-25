@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="70257d5f-851a-4445-99fe-5b3ee3df6b8a" name="SimpleControlFlow" linkedPackageId="56830888-d069-4339-9353-669c31345766" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="d056dcdc-fb89-4abc-b791-f71a73d48f73">
+      <elementDefinition Id="3971978f-dcb0-4124-9350-ce2d14a0bcff" />
+      <body>乘车前先选择一条地铁线路</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="a369eb8c-a607-4d8a-a983-06bb2a69ad4f" LastKnownName="选择地铁线路" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="0d813912-bde5-407a-88e9-47e6394d564f">
+      <profileInstance Id="e7eb8259-14b0-4ce9-9964-0153b9a140d4" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="1683da92-bdc5-45f3-954c-d55deedd154a">
+      <profileInstance Id="cbc222a7-e4d3-4dce-880d-bee4bbe88e6c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="cb8928fe-f988-4578-a2bc-fddd790d6987" name="SimpleControlFlow" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="5fd1f2d4-4d4c-48b2-8743-cf6741d5ed74" />
+        <nodes>
+          <initialNode Id="e95c7012-b8f0-4ff7-84cf-dee3380c9e61" name="Initial1" isLeaf="false">
+            <elementDefinition Id="a59c1bc2-752f-4c59-bbd8-1eae6379489e" />
+            <flowNodeTargets>
+              <controlFlow Id="8323c835-86f6-4e3e-aaec-450a8fa54194" isLeaf="false">
+                <opaqueActionMoniker Id="a369eb8c-a607-4d8a-a983-06bb2a69ad4f" LastKnownName="选择地铁线路" />
+                <elementDefinition Id="36d4db86-4c97-4118-b1e0-fd2be84f81e0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="263ba59a-6734-460e-8b01-6a6e5a7079ac" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="f5b26405-1139-4846-a080-41ac00b50594" />
+          </activityFinalNode>
+          <opaqueAction Id="a369eb8c-a607-4d8a-a983-06bb2a69ad4f" name="选择地铁线路" isLeaf="false">
+            <elementDefinition Id="f5056103-74ca-422b-b8d8-3afde2ca4da5" />
+            <flowNodeTargets>
+              <controlFlow Id="97c44c3f-1212-4f95-a993-a0c0f5a53dd4" isLeaf="false">
+                <opaqueActionMoniker Id="20012851-e955-4a11-abeb-08494b068043" LastKnownName="选择目的地" />
+                <elementDefinition Id="4a755dbb-26bc-429a-b1b2-8e9c89480ed7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="20012851-e955-4a11-abeb-08494b068043" name="选择目的地" isLeaf="false">
+            <elementDefinition Id="573e665d-27b0-48e2-ab73-acdd4baa6273" />
+            <flowNodeTargets>
+              <controlFlow Id="58998a94-7a2d-4e86-9680-84d0505c855e" isLeaf="false">
+                <decisionNodeMoniker Id="b1385c64-afa8-4875-9c4f-03c60e2ab083" LastKnownName="Decision1" />
+                <elementDefinition Id="e0223def-7080-40e7-8694-c6eed19eea76" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="b1385c64-afa8-4875-9c4f-03c60e2ab083" name="Decision1" isLeaf="false">
+            <elementDefinition Id="e2623a88-f0a1-4f78-a3a4-d7f81c853958" />
+            <flowNodeTargets>
+              <controlFlow Id="288f38e8-b0ac-4f68-9161-9f862e57ed7a" guard="选择错误线路时，可选重选择" isLeaf="false">
+                <opaqueActionMoniker Id="a369eb8c-a607-4d8a-a983-06bb2a69ad4f" LastKnownName="选择地铁线路" />
+                <elementDefinition Id="b05bc9b0-fa09-421c-8b58-98b7f9a1e132" />
+              </controlFlow>
+              <controlFlow Id="b6e605c2-1a96-447f-abdb-311e81c07354" isLeaf="false">
+                <opaqueActionMoniker Id="6ae96a7f-8d69-490a-a550-2aa169452b01" LastKnownName="购票" />
+                <elementDefinition Id="74563174-6e86-42be-919d-65ae91d5393a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="6ae96a7f-8d69-490a-a550-2aa169452b01" name="购票" isLeaf="false">
+            <elementDefinition Id="e3d8c12c-4208-4bee-b750-8c585cbfbfdf" />
+            <flowNodeTargets>
+              <controlFlow Id="e1382697-c006-4674-a745-d9bd12cc98ec" isLeaf="false">
+                <activityFinalNodeMoniker Id="263ba59a-6734-460e-8b01-6a6e5a7079ac" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="bbf29979-6def-4f97-835f-fc7cbd4f5c51" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="56830888-d069-4339-9353-669c31345766" name="ModelingProject">
+    <elementDefinition Id="75469d1a-900a-4fb6-8aef-b10cdf33bc45" />
+  </package>
+</activityRootModel>

@@ -6,6 +6,16 @@
   <ownedCommentsInternal>
     <comment
       Id="09517c2b-f22f-4e90-b5e6-6397752d8865" />
+    <comment
+      Id="3971978f-dcb0-4124-9350-ce2d14a0bcff">
+      <body>乘车前先选择一条地铁线路</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="f5056103-74ca-422b-b8d8-3afde2ca4da5"
+          LastKnownName="选择地铁线路"
+          LastKnownLocation="ModelingProject.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -104,6 +114,255 @@
                 value="2147483647" />
             </upperBound>
           </activityParameterNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="5fd1f2d4-4d4c-48b2-8743-cf6741d5ed74"
+        name="SimpleControlFlow"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="a59c1bc2-752f-4c59-bbd8-1eae6379489e"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="36d4db86-4c97-4118-b1e0-fd2be84f81e0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="f5056103-74ca-422b-b8d8-3afde2ca4da5"
+                  LastKnownName="选择地铁线路"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="f5b26405-1139-4846-a080-41ac00b50594"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="f5056103-74ca-422b-b8d8-3afde2ca4da5"
+            name="选择地铁线路"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4a755dbb-26bc-429a-b1b2-8e9c89480ed7"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="573e665d-27b0-48e2-ab73-acdd4baa6273"
+                  LastKnownName="选择目的地"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="573e665d-27b0-48e2-ab73-acdd4baa6273"
+            name="选择目的地"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e0223def-7080-40e7-8694-c6eed19eea76"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="e2623a88-f0a1-4f78-a3a4-d7f81c853958"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="e2623a88-f0a1-4f78-a3a4-d7f81c853958"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b05bc9b0-fa09-421c-8b58-98b7f9a1e132"
+                guard="选择错误线路时，可选重选择"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="f5056103-74ca-422b-b8d8-3afde2ca4da5"
+                  LastKnownName="选择地铁线路"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="74563174-6e86-42be-919d-65ae91d5393a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e3d8c12c-4208-4bee-b750-8c585cbfbfdf"
+                  LastKnownName="购票"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="e3d8c12c-4208-4bee-b750-8c585cbfbfdf"
+            name="购票"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bbf29979-6def-4f97-835f-fc7cbd4f5c51"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="f5b26405-1139-4846-a080-41ac00b50594"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="64eeb8ad-7721-4ffe-b0f0-6e85c2e1b48e"
+        name="ConcurrentFlows"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="5c5bab42-dce2-43f2-9a14-cbcb23a94b9a"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="998a5418-ce8d-4b42-a9ed-a083e48b8f13"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="043eccc6-c838-4ad5-9a57-8ffdb4a0af4b"
+                  LastKnownName="创建订单"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="9265717f-6f54-431f-bb80-516a43cd5120"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="043eccc6-c838-4ad5-9a57-8ffdb4a0af4b"
+            name="创建订单"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2a24a64e-a191-428f-89ba-356ebfabd0fc"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="e3e01622-2953-40eb-8cae-bc0d49ea8650"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="e3e01622-2953-40eb-8cae-bc0d49ea8650"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6e063de3-0e6d-45bd-89f0-86cbf03c4cc1"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="7cd8ef4e-80e6-4d11-b967-0fe2b0afdcb0"
+                  LastKnownName="发送结算费用"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="ace401c5-3c8a-490c-b5ba-2296dc8fa516"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3d7e7427-7599-4782-9ef5-0f4b04b11357"
+                  LastKnownName="发货"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <sendSignalAction
+            Id="7cd8ef4e-80e6-4d11-b967-0fe2b0afdcb0"
+            name="发送结算费用"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6e75e78e-0872-45f8-9695-a3ddb137cdd2"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="cc69e665-6b98-4602-be85-0531e58e36ae"
+                  LastKnownName="接收支付"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <acceptEventAction
+            Id="cc69e665-6b98-4602-be85-0531e58e36ae"
+            name="接收支付"
+            isLeaf="false"
+            isUnmarshall="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="483589c6-e7f5-4659-98d3-497eeb865e87"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="597891ad-62e4-439b-af98-39aa76cf04ff"
+                  LastKnownName="Join1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <opaqueAction
+            Id="3d7e7427-7599-4782-9ef5-0f4b04b11357"
+            name="发货"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d9438336-eb5a-43fd-b7fe-97f07a492075"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="597891ad-62e4-439b-af98-39aa76cf04ff"
+                  LastKnownName="Join1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode
+            Id="597891ad-62e4-439b-af98-39aa76cf04ff"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9c86fbe8-c750-4e8e-9dc4-17abad956d76"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9018bf71-f299-422e-94ab-ead6c354c865"
+                  LastKnownName="关闭订单"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction
+            Id="9018bf71-f299-422e-94ab-ead6c354c865"
+            name="关闭订单"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="91fc5584-9000-4e91-9b56-1dcf1ccb5cf3"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="9265717f-6f54-431f-bb80-516a43cd5120"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
         </nodes>
       </activity>
     </packageHasNamedElement>
