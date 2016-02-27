@@ -31,5 +31,9 @@ namespace MyFirstWebApp.Controllers
             return HtmlEncoder.Default.HtmlEncode(
                 "hello,name:" + name + ",id:" + ID);
         }
+        public IActionResult ViewShow()
+        {
+            return View();
+        }
     }
 }
